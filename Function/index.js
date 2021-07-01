@@ -27,3 +27,7 @@ function GetPow(Int, pow_int) {
     }
 }
 alert(GetPow(2, 3));
+let a = prompt("Введите число:")
+let b = prompt("Введите степень:")
+
+alert(GetPow(a, b));
