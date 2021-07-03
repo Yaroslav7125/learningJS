@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        user = {};
+        user["name"] = "John";
+        user["surname"] = "Smith";
+        user.name = "Pete";
+        delete(user.name);
+        console.log("-------------------------");
+    </script>
+    <script>
+        function IsEmpty(obj) {
+            for (let i in obj) return false;
+            return true;
+        }
+        let a = {}
+        console.log(IsEmpty(a));
+        a["a"] = "a";
+        console.log(IsEmpty(a));
+    </script>
+
+    <script>
+        console.log("-------------------------------")
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130,
+        }
+        let result = 0
+        for (let i in salaries) {
+            console.log(i);
+            result += salaries[i];
+        }
+        console.log(result);
+    </script>
+
+
+    <script>
+        function multiplyNumeric(obj) {
+            for (let i in obj) {
+                if (typeof(obj[i]) == "number") {
+                    obj[i] *= 2;
+                    console.log("done");
+                }
+            }
+        }
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        multiplyNumeric(menu);
+        console.log(menu)
+            // после вызова функции
+        menu = {
+            width: 400,
+            height: 600,
+            title: "My menu"
+        };
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
